@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "gym-tictactoe-np"
+version = "0.1.1"
+description = "3D TicTacToe environment for OpenAI's gym written with Numpy."
+license = 'MIT'
+authors = ["Ishan Manchanda <ishanmanchanda70@gmail.com>"]
+repository = 'https://github.com/IshanManchanda/gym-tictactoe-np'
+readme = 'README.md'
+#keywords = ['']
+#classifiers = [
+#    "Topic :: Software Development :: ",
+#]
+
+[tool.poetry.dependencies]
+python = "^3.7,<3.11"
+gym = "^0.20.0"
+numpy = "^1.21.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
