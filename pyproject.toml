@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gym-tictactoe-np"
-version = "0.2.1"
+version = "0.3.0"
 description = "3D TicTacToe environment for OpenAI's gym written with Numpy."
 license = "MIT"
 authors = ["Ishan Manchanda <ishanmanchanda70@gmail.com>"]
