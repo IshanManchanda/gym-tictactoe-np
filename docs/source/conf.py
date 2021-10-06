@@ -16,7 +16,7 @@ from sphinx.ext.apidoc import main
 
 sys.path.insert(0, os.path.abspath('../../gym_tictactoe_np'))
 cur_dir = os.path.abspath(os.path.dirname(__file__))
-module = os.path.join(cur_dir, "../..", "gym_tictactoe-np")
+module = os.path.join(cur_dir, "../..", "gym_tictactoe_np")
 main(['-e', '-o', cur_dir, module, '--force'])
 
 # -- Project information -----------------------------------------------------
@@ -35,8 +35,12 @@ release = '0.2.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'myst_parser', 'sphinx.ext.autodoc', 'sphinxcontrib.napoleon'
+    'myst_parser', 'sphinx.ext.autodoc', 'sphinxcontrib.napoleon',
+    'sphinx.ext.autosummary',
 ]
+
+autodoc_default_flags = ['members']
+autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

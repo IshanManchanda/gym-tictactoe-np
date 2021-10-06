@@ -7,11 +7,11 @@ class TicTacToeEnv(gym.Env):
     """
     3D TicTacToe environment without safety checks
 
-    The board is stored as a 3x3x3 numpy int_ array with player tokens.
+    The board is stored as a 3x3x3 numpy int array with player tokens.
     A value of 0 denotes an empty cell,
     1 denotes player 1 ('x'), and -1 denotes player 2 ('o').
 
-    Actions are given by a 3-element numpy int_ array with values in {0, 1, 2}.
+    Actions are given by a 3-element numpy int array with values in {0, 1, 2}.
     The first number represents the block to move in,
     second represents the row, and third the column.
     """
