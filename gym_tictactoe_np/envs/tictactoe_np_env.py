@@ -30,7 +30,7 @@ class TicTacToeEnv(gym.Env):
 
         # Initial state
         self.board = TicTacToeEnv.get_empty_board()
-        self.current = 0
+        self.current = 1
         self.round = 0
         self.done = False
 
@@ -45,7 +45,7 @@ class TicTacToeEnv(gym.Env):
         """
         # Reset to the initial state and return board as observation
         self.board = TicTacToeEnv.get_empty_board()
-        self.current = 0
+        self.current = 1
         self.round = 0
         self.done = False
         return self.board
@@ -72,7 +72,7 @@ class TicTacToeEnv(gym.Env):
             Additional information for debugging
         """
         info = {}
-        self.board[action] = self.current
+        self.board[tuple(action)] = self.current
         self.round += 1
 
         # Check if game won on this move
@@ -177,9 +177,9 @@ class TicTacToeEnv(gym.Env):
         Returns
         -------
         board : numpy.ndarray
-            3x3x3 numpy int array of ones
+            3x3x3 numpy int array of zeros
         """
-        return np.ones((3, 3, 3), dtype=np.int_)
+        return np.zeros((3, 3, 3), dtype=np.int_)
 
     @staticmethod
     def get_available_actions(board):
@@ -197,4 +197,4 @@ class TicTacToeEnv(gym.Env):
             Nx3 numpy array with the N currently available actions
         """
         # 1 indicates blank in the observation space
-        return np.argwhere(board == 1)
+        return np.argwhere(board == 0)
