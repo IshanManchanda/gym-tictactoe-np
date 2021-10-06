@@ -71,6 +71,7 @@ class TicTacToeEnv(gym.Env):
         info : dict
             Additional information for debugging
         """
+        info = {}
         self.board[action] = self.current
         self.round += 1
 
@@ -79,12 +80,10 @@ class TicTacToeEnv(gym.Env):
         # Check if game ended in a draw on this move
         self.done = reward or self.round == 27
 
-        # Next player's turn. 0 -> 2 and 2 -> 0
-        self.current = 2 - self.current
+        # Next player's turn. 1 -> -1, -1 -> 1
+        self.current *= -1
 
-        info = {}
-        # Add 1 to board to conform to gym's observation space
-        return self.board + 1, reward, self.done, info
+        return self.board, reward, self.done, info
 
     def render(self, mode='human', close=False):
         """
