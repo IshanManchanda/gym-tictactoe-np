@@ -1,14 +1,15 @@
 from random import shuffle
 
-from agents.agent_human import HumanAgent
-from agents.agent_random import RandomAgent
-from gym_tictactoe_np.envs.tictactoe_np_env import TicTacToeEnv
+import gym
+
+from gym_tictactoe_np.agents import HumanAgent
+from gym_tictactoe_np.agents import RandomAgent
 
 
 def main():
     # Driver code to run human-vs-RandomAgent 3D TicTacToe
     # Create environment
-    env = TicTacToeEnv()
+    env = gym.make('tictactoe-np-v0')
 
     # Assign player 1 and 2 randomly to human and agent
     players = [HumanAgent(), RandomAgent()]

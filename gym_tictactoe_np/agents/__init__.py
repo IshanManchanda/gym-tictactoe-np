@@ -1,0 +1,2 @@
+from gym_tictactoe_np.agents.agent_human import HumanAgent
+from gym_tictactoe_np.agents.agent_random import RandomAgent
