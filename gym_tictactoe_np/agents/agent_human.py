@@ -1,6 +1,6 @@
 import numpy as np
 
-from gym_tictactoe_np.envs import TicTacToeEnv
+from gym_tictactoe_np import TicTacToeEnv
 
 
 class HumanAgent:
