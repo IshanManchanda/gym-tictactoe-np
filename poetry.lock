@@ -76,26 +76,37 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "gym"
-version = "0.20.0"
-description = "Gym: A universal API for reinforcement learning environments."
+version = "0.26.1"
+description = "Gym: A universal API for reinforcement learning environments"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
 cloudpickle = ">=1.2.0"
+gym_notices = ">=0.0.4"
+importlib_metadata = {version = ">=4.8.0", markers = "python_version < \"3.10\""}
 numpy = ">=1.18.0"
 
 [package.extras]
-all = ["ale-py (>=0.7,<1.0)", "box2d-py (==2.3.5)", "lz4 (>=3.1.0)", "mujoco_py (>=1.50,<2.0)", "pyglet (>=1.4.0)", "scipy (>=1.4.1)"]
-atari = ["ale-py (>=0.7,<1.0)"]
-box2d = ["box2d-py (==2.3.5)", "pyglet (>=1.4.0)"]
-classic_control = ["pyglet (>=1.4.0)"]
-mujoco = ["mujoco_py (>=1.50,<2.0)"]
-nomujoco = ["ale-py (>=0.7,<1.0)", "box2d-py (==2.3.5)", "lz4 (>=3.1.0)", "pyglet (>=1.4.0)", "scipy (>=1.4.1)"]
-other = ["lz4 (>=3.1.0)"]
-robotics = ["mujoco_py (>=1.50,<2.0)"]
-toy_text = ["scipy (>=1.4.1)"]
+accept-rom-license = ["autorom[accept-rom-license] (>=0.4.2,<0.5.0)"]
+all = ["ale-py (>=0.8.0,<0.9.0)", "box2d-py (==2.3.5)", "imageio (>=2.14.1)", "lz4 (>=3.1.0)", "matplotlib (>=3.0)", "moviepy (>=1.0.0)", "mujoco (==2.2.0)", "mujoco_py (>=2.1,<2.2)", "opencv-python (>=3.0)", "pygame (==2.1.0)", "pytest (==7.0.1)", "swig (>=4.0.0,<5.0.0)"]
+atari = ["ale-py (>=0.8.0,<0.9.0)"]
+box2d = ["box2d-py (==2.3.5)", "pygame (==2.1.0)", "swig (>=4.0.0,<5.0.0)"]
+classic_control = ["pygame (==2.1.0)"]
+mujoco = ["imageio (>=2.14.1)", "mujoco (==2.2.0)"]
+mujoco_py = ["mujoco_py (>=2.1,<2.2)"]
+other = ["lz4 (>=3.1.0)", "matplotlib (>=3.0)", "moviepy (>=1.0.0)", "opencv-python (>=3.0)"]
+testing = ["box2d-py (==2.3.5)", "imageio (>=2.14.1)", "lz4 (>=3.1.0)", "matplotlib (>=3.0)", "moviepy (>=1.0.0)", "mujoco (==2.2.0)", "mujoco_py (>=2.1,<2.2)", "opencv-python (>=3.0)", "pygame (==2.1.0)", "pytest (==7.0.1)", "swig (>=4.0.0,<5.0.0)"]
+toy_text = ["pygame (==2.1.0)"]
+
+[[package]]
+name = "gym-notices"
+version = "0.0.8"
+description = "Notices for gym"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "idna"
@@ -118,7 +129,7 @@ name = "importlib-metadata"
 version = "5.0.0"
 description = "Read metadata from Python packages"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -441,7 +452,7 @@ name = "typing-extensions"
 version = "3.10.0.2"
 description = "Backported and Experimental Type Hints for Python 3.5+"
 category = "main"
-optional = true
+optional = false
 python-versions = "*"
 
 [[package]]
@@ -462,7 +473,7 @@ name = "zipp"
 version = "3.8.1"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.7"
 
 [package.extras]
@@ -475,7 +486,7 @@ docs = ["myst-parser", "Sphinx", "sphinx-rtd-theme", "sphinxcontrib-napoleon"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7,<3.11"
-content-hash = "873be37809b4901ed6cd2708cdfbc337838cb026283bf690c5acb497c7ce2364"
+content-hash = "914485f5385ca81645389e99fd1252d8bed6a41832c88f2834033cdfe2fe3179"
 
 [metadata.files]
 alabaster = [
@@ -511,7 +522,11 @@ docutils = [
     {file = "docutils-0.17.1.tar.gz", hash = "sha256:686577d2e4c32380bb50cbb22f575ed742d58168cee37e99117a854bcd88f125"},
 ]
 gym = [
-    {file = "gym-0.20.0.tar.gz", hash = "sha256:ca963d003cf8b7db8205865de6f3fed605e17e8e488f55ed9118b7768ea21100"},
+    {file = "gym-0.26.1.tar.gz", hash = "sha256:a632c3fcee0b4fcb8d110c127fe0e4a195195cf0a3707da4578564afbed96512"},
+]
+gym-notices = [
+    {file = "gym-notices-0.0.8.tar.gz", hash = "sha256:ad25e200487cafa369728625fe064e88ada1346618526102659b4640f2b4b911"},
+    {file = "gym_notices-0.0.8-py3-none-any.whl", hash = "sha256:e5f82e00823a166747b4c2a07de63b6560b1acb880638547e0cabf825a01e463"},
 ]
 idna = [
     {file = "idna-3.2-py3-none-any.whl", hash = "sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a"},
